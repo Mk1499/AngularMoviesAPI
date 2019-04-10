@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="conatiner">
+
+  <!-- <app-movies-db> </app-movies-db> -->
+<h2 class="text-center"> Movies API </h2>
+  <div class="row">
+    <div class="col-sm-3">
+      <app-sidebar (currentMovie) = "recieveCurMovie($event)" [movies] = "moviesList"> </app-sidebar>
+    </div>
+    <div class="col-sm-9">
+            <app-search-movie (searchResult) = "searchResult($event)"></app-search-movie>
+
+      <app-movie [mov] = "currentMovie"></app-movie>
+    </div>
+  </div>
+
+</div>

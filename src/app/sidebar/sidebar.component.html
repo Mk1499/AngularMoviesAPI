@@ -1,0 +1,11 @@
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li *ngFor="let movie of movies" class="nav-item">
+            <button class="nav-link active btn btn-default" (click) = "changeCurrent(movie['imdbID'])" >
+              {{movie["Title"]}}
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
