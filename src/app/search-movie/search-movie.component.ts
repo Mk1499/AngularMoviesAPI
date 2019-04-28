@@ -26,9 +26,12 @@ export class SearchMovieComponent implements OnInit {
     this.movName = formData.value.mName ;
 
     this._movies.searchMovie(this.movName)
-    .subscribe(data => this.movies = data["Search"])
+    .subscribe((data )=> {
+      this.movies = data["Search"] ;
+      this.searchResult.emit(this.movies) ;
+      })
 
-    this.searchResult.emit(this.movies) ;
+
 
   }
 

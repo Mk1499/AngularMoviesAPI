@@ -22,8 +22,10 @@ changeCurrent(movieId){
   // console.log("Movie ID : ",movieId);
 
   // localStorage.setItem("CurrentMovie",JSON.stringify(movie)) ;
-  this._movies.getMovieDetails(movieId).subscribe((data)=> this.movie = data) ;
-  this.currentMovie.emit(this.movie) ;
+  this._movies.getMovieDetails(movieId).subscribe((data)=>{ this.movie = data ;
+      this.currentMovie.emit(this.movie) ;
+  }) ;
+
 }
 
 
